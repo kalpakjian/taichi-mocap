@@ -8,8 +8,8 @@ import os
 import bpy
 from mathutils import Matrix, Vector
 
-BVH = os.environ.get("BVH_PATH", r"C:\Users\princ\Downloads\taichi_enh\mocap\taichi60.bvh")
-OUT = os.environ.get("OUT_DIR", r"C:\Users\princ\Downloads\taichi_enh\preview")
+BVH = os.environ.get("BVH_PATH", "mocap.bvh")
+OUT = os.environ.get("OUT_DIR", "preview")
 END = int(os.environ.get("PREVIEW_END", "0"))
 RES = os.environ.get("RES", "960x540")
 FPS = int(round(float(os.environ.get("FPS", "15"))))

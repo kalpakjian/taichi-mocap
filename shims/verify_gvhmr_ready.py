@@ -1,8 +1,9 @@
 """Is GVHMR ready to run? Body models present, smplx loads, checkpoint instantiates."""
+import os
 import sys
 from pathlib import Path
 
-GV = Path(r"C:\Users\princ\GVHMR")
+GV = Path(os.environ.get("GVHMR_HOME", Path.home() / "GVHMR"))
 paths = {
     "SMPLX (needed)": GV / "inputs/checkpoints/body_models/smplx/SMPLX_NEUTRAL.npz",
     "SMPLX (2nd copy)": GV / "inputs/models/smplx/SMPLX_NEUTRAL.npz",

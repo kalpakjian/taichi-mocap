@@ -8,11 +8,12 @@ twist and reproduces the pose exactly - unlike deriving rotations from joint pos
 import argparse
 import os
 import sys
+from pathlib import Path
 
 import numpy as np
 import torch
 
-sys.path.insert(0, r"C:\Users\princ\scripts")
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from mocap_math import euler_zxy  # noqa: E402
 
 NAMES = ["Pelvis", "L_Hip", "R_Hip", "Spine1", "L_Knee", "R_Knee", "Spine2", "L_Ankle", "R_Ankle",

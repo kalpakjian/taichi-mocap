@@ -3,10 +3,11 @@
 The performer faces the camera for most of this clip, so the correct 3D capture must put the
 nose in front of the ears. A mirrored capture flips this depth ordering.
 """
+import os
 import cv2
 import numpy as np
 
-NPZ = r"C:\Users\princ\Downloads\taichi_enh\mocap\taichi60.npz"
+NPZ = os.environ.get("NPZ", "mocap.npz")
 z = np.load(NPZ)
 world, img2d, vis = z["world"].astype(np.float64), z["image2d"].astype(np.float64), z["visibility"]
 W, H = int(z["width"]), int(z["height"])

@@ -1,7 +1,7 @@
 # GVHMR deps for Windows / Python 3.12.
 # Differences from upstream requirements.txt:
 #   - torch/torchvision installed separately from the cu121 index
-#   - pytorch3d removed  -> use C:\Users\princ\shims (pure-torch shim)
+#   - pytorch3d removed  -> use <repo>\shims (pure-torch shim)
 #   - cython_bbox removed -> not imported anywhere in the repo
 #   - numpy 1.23.5 -> 1.26.4 (no cp312 wheels for 1.23)
 timm==0.9.12

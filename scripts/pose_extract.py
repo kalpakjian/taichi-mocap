@@ -12,6 +12,7 @@ import argparse
 import os
 import subprocess
 import sys
+from pathlib import Path
 
 import cv2
 import numpy as np
@@ -188,7 +189,8 @@ def main():
     ap.add_argument("outdir")
     ap.add_argument("--start", type=float, default=0.0)
     ap.add_argument("--seconds", type=float, default=60.0)
-    ap.add_argument("--model", default=r"C:\Users\princ\models\mediapipe\pose_landmarker_heavy.task")
+    ap.add_argument("--model", default=os.environ.get("POSE_MODEL", str(Path.home() / "models" / "mediapipe" / "pose_landmarker_heavy.task")),
+                    help="MediaPipe pose_landmarker_*.task file")
     ap.add_argument("--smooth", type=int, default=5, help="moving-average window in frames")
     ap.add_argument("--tag", default="pose")
     a = ap.parse_args()

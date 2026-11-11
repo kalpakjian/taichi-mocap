@@ -4,12 +4,13 @@ Runs solvePnP with a focal-length search on two variants - the mirrored one (y f
 the old bug) and the handedness-preserving one - and reports reprojection error in pixels.
 """
 
+import os
 import sys
 
 import cv2
 import numpy as np
 
-NPZ = sys.argv[1] if len(sys.argv) > 1 else r"C:\Users\princ\Downloads\taichi_enh\mocap\taichi60.npz"
+NPZ = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("NPZ", "mocap.npz")
 z = np.load(NPZ)
 world, img, vis = z["world"].astype(np.float64), z["image2d"].astype(np.float64), z["visibility"]
 W, H = int(z["width"]), int(z["height"])
