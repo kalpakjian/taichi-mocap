@@ -1,0 +1,22 @@
+# 產出物（影片、模型、骨架資料）不入版控
+*.mp4
+*.flv
+*.mkv
+*.mov
+*.bvh
+*.npz
+*.pth
+*.ckpt
+*.task
+*.safetensors
+
+# 暫存
+__pycache__/
+*.pyc
+frames/
+preview/
+preview_gvhmr*/
+_covergen/
+*.log
+*.err
+*.out

@@ -1,0 +1,7 @@
+# Route A（MediaPipe）需要的 Python 套件
+# 實測版本：Python 3.12、mediapipe 1.2.2、opencv 5.0.0、numpy 2.5
+mediapipe>=0.10
+opencv-python>=4.9
+numpy>=1.26
+
+# Route B（GVHMR）請改用 shims/gvhmr-requirements-win.txt，並另外安裝 torch 2.3 cu121
